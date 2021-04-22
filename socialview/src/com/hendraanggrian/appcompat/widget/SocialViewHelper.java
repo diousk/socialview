@@ -14,6 +14,7 @@ import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.URLSpan;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -128,6 +129,7 @@ public final class SocialViewHelper implements SocialView {
                     case '@':
                         hashtagEditing = false;
                         mentionEditing = true;
+                        Log.d("SOCIAL", "mentionEditing");
                         break;
                     default:
                         if (!Character.isLetterOrDigit(s.charAt(start))) {

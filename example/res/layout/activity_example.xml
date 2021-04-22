@@ -24,4 +24,26 @@
         android:completionThreshold="0"
         android:hint="What's on your mind?"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.hendraanggrian.appcompat.widget.SocialTextView
+        android:id="@+id/socialTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        />
+
+    <com.hendraanggrian.appcompat.widget.SocialEditText
+        android:id="@+id/socialEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        />
+
+    <com.example.socialview.MentionEditText
+        android:id="@+id/memtionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

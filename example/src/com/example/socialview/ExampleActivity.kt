@@ -79,6 +79,19 @@ class ExampleActivity : AppCompatActivity() {
         textView.mentionAdapter = defaultMentionAdapter
         textView.setHashtagTextChangedListener { _, text -> Log.d("hashtag", text.toString()) }
         textView.setMentionTextChangedListener { _, text -> Log.d("mention", text.toString()) }
+        socialTextView.text = "hi @dodo 123 #abc"
+        socialTextView.setOnHashtagClickListener { view, text ->
+            Log.d("hashtag", text.toString())
+        }
+
+        socialTextView.setOnMentionClickListener { view, text ->
+            Log.d("mention", text.toString())
+        }
+
+        memtionEditText.setOnMentionInputListener {
+            Log.d("mention", "setOnMentionInputListener")
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

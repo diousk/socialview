@@ -9,6 +9,7 @@ import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import androidx.annotation.ColorInt;
@@ -46,9 +47,10 @@ public class SocialAutoCompleteTextView extends AppCompatMultiAutoCompleteTextVi
                         }
                         break;
                     case '@':
-                        if (getAdapter() != mentionAdapter) {
-                            setAdapter(mentionAdapter);
-                        }
+                        Log.d("TEXT", "onTextChanged mentionAdapter");
+//                        if (getAdapter() != mentionAdapter) {
+//                            setAdapter(mentionAdapter);
+//                        }
                         break;
                 }
             }
